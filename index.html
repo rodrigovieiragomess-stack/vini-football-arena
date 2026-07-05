@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VINI FOOTBALL ARENA — Create your NFT player. Dominate the arena.</title>
+<meta name="description" content="Vini Football Arena — the football NFT game in the Vini Meme Coin ecosystem. Build your squad, mint NFT players, trade on the marketplace and battle in PvP with $VINI." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Russo+One&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="arena-styles.css?v=3">
+</head>
+<body>
+
+<!-- ===== PITCH BACKGROUND ===== -->
+<div class="pitch-bg"></div>
+<svg class="pitch-lines" viewBox="0 0 1000 1400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <g fill="none" stroke="rgba(238,255,240,0.5)" stroke-width="2.5">
+    <rect x="40" y="40" width="920" height="1320" rx="4"/>
+    <line x1="40" y1="700" x2="960" y2="700"/>
+    <circle cx="500" cy="700" r="130"/>
+    <circle cx="500" cy="700" r="5" fill="rgba(238,255,240,0.5)"/>
+    <rect x="300" y="40" width="400" height="200"/>
+    <rect x="410" y="40" width="180" height="80"/>
+    <path d="M 360 240 A 130 130 0 0 0 640 240"/>
+    <rect x="300" y="1160" width="400" height="200"/>
+    <rect x="410" y="1280" width="180" height="80"/>
+    <path d="M 360 1160 A 130 130 0 0 1 640 1160"/>
+  </g>
+</svg>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">V</span>
+      <span class="brand-name">VINI<b>FOOTBALL ARENA</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#nft">NFT Players</a>
+      <a href="#builder">Squad Builder</a>
+      <a href="#market">Marketplace</a>
+      <a href="#pvp">PvP Arena</a>
+      <a href="#presale">Presale</a>
+      <a href="#economy">$VINI</a>
+      <a href="Game.html" class="nav-play">⚽ Play</a>
+    </div>
+    <button class="wallet-btn" id="walletBtn">Connect Phantom</button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <div class="floodlights" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Football · NFT · $VINI</span>
+      <h1><span class="l1">Create your</span><span class="l2">NFT Player</span></h1>
+      <p class="lede">Mint footballers on Solana, evolve their attributes, build your squad and <b>dominate the arena</b> with $VINI. The football game powered by the Vini Meme Coin ecosystem.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#builder">Build your squad</a>
+        <a class="btn btn-neon" href="#nft">Explore players</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="v count" data-to="4">4</div><div class="k">Rarities</div></div>
+        <div class="hstat"><div class="v count" data-to="5">5</div><div class="k">Game phases</div></div>
+        <div class="hstat"><div class="v">PvP</div><div class="k">Live arena</div></div>
+        <div class="hstat"><div class="v">$VINI</div><div class="k">Token economy</div></div>
+      </div>
+    </div>
+
+    <!-- mini pitch with floating card -->
+    <div class="hero-pitch" id="heroPitch">
+      <svg viewBox="0 0 300 400" preserveAspectRatio="none" aria-hidden="true">
+        <g fill="none" stroke="rgba(238,255,240,0.45)" stroke-width="1.5">
+          <rect x="10" y="10" width="280" height="380" rx="3"/>
+          <line x1="10" y1="200" x2="290" y2="200"/>
+          <circle cx="150" cy="200" r="48"/>
+          <rect x="95" y="10" width="110" height="55"/>
+          <rect x="95" y="335" width="110" height="55"/>
+        </g>
+      </svg>
+      <div style="position:absolute; inset:0; display:grid; place-items:center;">
+        <div id="heroCardStage"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== ECOSYSTEM / PHASES ===== -->
+<section id="ecosystem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Ecosystem</span>
+      <h2 class="section-title">Five phases, <span class="accent">one arena</span></h2>
+      <p class="section-sub">From the MVP web game to global tournaments — every phase of Vini Football Arena, built on Solana around the $VINI token.</p>
+    </div>
+    <div class="phase-track reveal">
+      <div class="phase">
+        <span class="ptag now">Live</span>
+        <div class="pn">01</div><div class="pl">MVP Web Game</div>
+        <ul>
+          <li><span class="ck">✓</span> Phantom wallet login</li>
+          <li><span class="ck">✓</span> Player creation</li>
+          <li><span class="ck">✓</span> Attribute system</li>
+          <li><span class="ck">✓</span> Simulated matches</li>
+          <li><span class="ck">✓</span> Online ranking &amp; XP</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="ptag now">Now</span>
+        <div class="pn">02</div><div class="pl">NFT Players</div>
+        <ul>
+          <li><span class="ck">✓</span> Players become NFTs</li>
+          <li><span class="ck">✓</span> Mint on Solana</li>
+          <li><span class="ck">✓</span> Common &amp; Rare</li>
+          <li><span class="ck">✓</span> Epic &amp; Legendary</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="ptag soon">Soon</span>
+        <div class="pn">03</div><div class="pl">$VINI Token</div>
+        <ul>
+          <li><span class="ck">✓</span> Create players</li>
+          <li><span class="ck">✓</span> Upgrade attributes</li>
+          <li><span class="ck">✓</span> Buy items</li>
+          <li><span class="ck">✓</span> Enter tournaments</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="ptag soon">Soon</span>
+        <div class="pn">04</div><div class="pl">Marketplace</div>
+        <ul>
+          <li><span class="ck">✓</span> Buy &amp; sell NFTs</li>
+          <li><span class="ck">✓</span> Transaction history</li>
+          <li><span class="ck">✓</span> Special items</li>
+          <li><span class="ck">✓</span> Player transfers</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="ptag soon">Soon</span>
+        <div class="pn">05</div><div class="pl">Tournaments</div>
+        <ul>
+          <li><span class="ck">✓</span> Weekly ranking</li>
+          <li><span class="ck">✓</span> Global championship</li>
+          <li><span class="ck">✓</span> $VINI rewards</li>
+          <li><span class="ck">✓</span> Seasons</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NFT PLAYERS ===== -->
+<div class="field-divider" aria-hidden="true"><span class="fd-line"></span><span class="fd-circle"></span><span class="fd-line"></span></div>
+<section id="nft">
+  <div class="wrap">
+    <div class="nft-grid">
+      <div>
+        <div class="rarity-tabs">
+          <button class="rarity-tab" data-r="common">Common</button>
+          <button class="rarity-tab" data-r="rare">Rare</button>
+          <button class="rarity-tab" data-r="epic">Epic</button>
+          <button class="rarity-tab" data-r="legendary">Legendary</button>
+        </div>
+        <div id="cardStage" style="display:grid; place-items:center;"></div>
+      </div>
+      <div class="nft-info reveal">
+        <span class="eyebrow">NFT Players</span>
+        <h2 class="section-title left" style="text-align:left">Every player is a <span class="accent">one-of-a-kind NFT</span></h2>
+        <p class="section-sub" style="margin:0">Minted on Solana via Metaplex. Each footballer carries live attributes, a rarity tier and a market value in $VINI. Switch the rarity to see how stats and floor price scale.</p>
+        <div class="feat">
+          <div class="nft-feat"><div class="fi">PAC</div><div><h4>Five core attributes</h4><p>Pace, Shooting, Defending, Stamina and Rarity define how your player performs on the pitch.</p></div></div>
+          <div class="nft-feat"><div class="fi">★</div><div><h4>Four rarity tiers</h4><p>Common, Rare, Epic and Legendary — the rarer the card, the higher the ceiling and the floor price.</p></div></div>
+          <div class="nft-feat"><div class="fi">XP</div><div><h4>Evolve &amp; upgrade</h4><p>Spend $VINI to train attributes and push your players up the rarity ladder.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SQUAD BUILDER ===== -->
+<section id="builder">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Squad Builder</span>
+      <h2 class="section-title">Set up your <span class="accent">starting XI</span></h2>
+      <p class="section-sub">Pick a player from your roster, then tap a position on the pitch to line them up. Tap a filled spot to remove. Build chemistry and push your team rating up.</p>
+    </div>
+    <div class="builder-grid">
+      <div class="pitch-board" id="pitchBoard">
+        <svg class="field-svg" viewBox="0 0 300 410" preserveAspectRatio="none" aria-hidden="true">
+          <g fill="none" stroke="rgba(238,255,240,0.4)" stroke-width="1.5">
+            <rect x="8" y="8" width="284" height="394" rx="3"/>
+            <line x1="8" y1="205" x2="292" y2="205"/>
+            <circle cx="150" cy="205" r="46"/>
+            <circle cx="150" cy="205" r="3" fill="rgba(238,255,240,0.4)"/>
+            <rect x="90" y="8" width="120" height="58"/>
+            <rect x="125" y="8" width="50" height="24"/>
+            <rect x="90" y="344" width="120" height="58"/>
+            <rect x="125" y="378" width="50" height="24"/>
+          </g>
+        </svg>
+      </div>
+      <div class="builder-side">
+        <div class="team-ovr reveal">
+          <div><div class="k">Team rating</div><div class="big" id="teamOvr">--</div></div>
+          <div class="chem" style="text-align:right">
+            <div class="ck" id="teamChem">0% chemistry</div>
+            <div class="k" id="teamCount" style="margin-top:6px">0/11 starters</div>
+          </div>
+        </div>
+        <div class="roster-head">
+          <h4>Your Roster</h4>
+          <div style="display:flex; gap:8px;">
+            <button class="btn btn-neon btn-sm" id="autoFill">Auto XI</button>
+            <button class="btn btn-ghost btn-sm" id="clearTeam">Clear</button>
+          </div>
+        </div>
+        <div class="roster" id="roster"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARKETPLACE ===== -->
+<section id="market">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Marketplace</span>
+      <h2 class="section-title">Buy &amp; sell <span class="accent">player NFTs</span></h2>
+      <p class="section-sub">Trade footballers with the community. Filter by rarity, check the stats and grab your next star with $VINI.</p>
+    </div>
+    <div class="mkt-bar reveal">
+      <div class="filters">
+        <button class="filter" data-f="all" data-active="true">All</button>
+        <button class="filter" data-f="common">Common</button>
+        <button class="filter" data-f="rare">Rare</button>
+        <button class="filter" data-f="epic">Epic</button>
+        <button class="filter" data-f="legendary">Legendary</button>
+      </div>
+      <a class="btn btn-gold btn-sm" href="#builder">+ List a player</a>
+    </div>
+    <div class="mkt-grid" id="mktGrid"></div>
+  </div>
+</section>
+
+<!-- ===== STADIUM BAND ===== -->
+<section class="stadium-band" aria-hidden="false">
+  <div class="sb-lights"><span></span><span></span><span></span><span></span></div>
+  <div class="sb-stands"></div>
+  <div class="sb-pitch"></div>
+  <div class="sb-content">
+    <span class="eyebrow">The Arena awaits</span>
+    <h2 class="stadium-title">STEP ONTO THE <span class="accent">PITCH</span></h2>
+    <p>Floodlights on. Crowd roaring. Your $VINI squad takes the field.</p>
+  </div>
+</section>
+
+<!-- ===== PVP ARENA ===== -->
+<section id="pvp">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">PvP Arena</span>
+      <h2 class="section-title">Live <span class="accent">match scoreboard</span></h2>
+      <p class="section-sub">Send your squad into a head-to-head simulation. Watch the goals roll in minute by minute and earn $VINI for the win.</p>
+    </div>
+    <div class="pvp-wrap">
+      <div class="scoreboard reveal">
+        <div class="sb-top">
+          <span class="sb-live">Live</span>
+          <span class="sb-comp">Weekly Cup · Round of 16</span>
+        </div>
+        <div class="sb-main">
+          <div class="sb-team">
+            <div class="sb-crest" id="homeCrest">VU</div>
+            <div class="tn">Vini United</div>
+            <div class="tovr">OVR 88</div>
+          </div>
+          <div class="sb-center">
+            <div class="sb-score"><span id="scoreH">0</span> : <span id="scoreA">0</span></div>
+            <div class="sb-clock" id="clock">0'</div>
+          </div>
+          <div class="sb-team">
+            <div class="sb-crest" id="awayCrest">NG</div>
+            <div class="tn">Neon Galaxy</div>
+            <div class="tovr">OVR 85</div>
+          </div>
+        </div>
+        <div class="sb-bar"><i class="home" id="barHome" style="width:50%"></i><i class="away" id="barAway" style="width:50%"></i></div>
+        <div class="sb-actions">
+          <button class="btn btn-gold" id="simBtn">Kick off</button>
+          <button class="btn btn-ghost" id="resetMatch">Reset</button>
+        </div>
+      </div>
+      <div class="pvp-feed reveal">
+        <h4>Match feed</h4>
+        <div class="feed-list" id="feedList"></div>
+        <div class="pvp-reward" id="pvpReward">
+          <span style="font-size:1.4rem">🏆</span>
+          <div><div class="rw-amt" id="rwAmt">+0 $VINI</div><div class="rw-k" id="rwText">Victory reward</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ranking -->
+    <div style="margin-top:60px">
+      <div class="section-head reveal" style="margin-bottom:28px">
+        <span class="eyebrow">Leaderboard</span>
+        <h2 class="section-title" style="font-size:clamp(1.6rem,3.6vw,2.4rem)">Weekly <span class="accent">ranking</span></h2>
+      </div>
+      <div class="rank-table reveal">
+        <div class="rank-row head">
+          <div style="text-align:center">#</div><div>Manager</div><div>W-L</div><div>Points</div>
+        </div>
+        <div id="rankBody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GAME CARD ===== -->
+<div class="field-divider" aria-hidden="true"><span class="fd-line"></span><span class="fd-circle"></span><span class="fd-line"></span></div>
+<section id="play">
+  <div class="wrap">
+    <a class="game-card reveal" href="Game.html">
+      <div class="gc-glow" aria-hidden="true"></div>
+      <div class="gc-body">
+        <span class="eyebrow">Play Now · Demo Mode</span>
+        <h2 class="gc-title">VINI <span>PENALTY ARENA</span></h2>
+        <p class="gc-sub">Step up to the spot. Aim, charge your power and beat the keeper across 5 penalties — build a combo and bank simulated $VINI. Playable on desktop and mobile.</p>
+        <div class="gc-tags">
+          <span class="gc-tag">⚽ Penalty shootout</span>
+          <span class="gc-tag">🔥 Combo rewards</span>
+          <span class="gc-tag">🏆 Leaderboard</span>
+        </div>
+        <span class="btn btn-gold gc-btn">▶ Open the game</span>
+      </div>
+      <div class="gc-visual" aria-hidden="true">
+        <div class="gc-goal"></div>
+        <div class="gc-ball"></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== PRESALE ===== -->
+<div class="field-divider" aria-hidden="true"><span class="fd-line"></span><span class="fd-circle"></span><span class="fd-line"></span></div>
+<section id="presale">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Presale</span>
+      <h2 class="section-title">Get <span class="accent">$VINI</span> early</h2>
+      <p class="section-sub">Connect your Phantom wallet, send SOL, and secure your $VINI allocation before launch.</p>
+    </div>
+    <div class="presale-card reveal">
+      <div class="presale-row">
+        <button class="wallet-btn" id="presaleConnectBtn">Connect Phantom</button>
+        <span class="presale-bal" id="presaleSolBalance"></span>
+      </div>
+      <div class="presale-row">
+        <label for="presaleSolAmount">Amount (SOL)</label>
+        <input type="number" id="presaleSolAmount" min="0" step="0.01" placeholder="0.5" />
+        <span class="presale-estimate" id="presaleViniEstimate">≈ 0 $VINI</span>
+      </div>
+      <button class="btn btn-gold" id="presaleBuyBtn" disabled>Buy $VINI</button>
+      <div class="presale-status" id="presaleStatus"></div>
+      <p class="presale-disclaimer">Presale runs on Solana. Tokens are delivered to the wallet address you connect with. Crypto assets are volatile and speculative — this is not financial advice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ECONOMY ===== -->
+<div class="field-divider" aria-hidden="true"><span class="fd-line"></span><span class="fd-circle"></span><span class="fd-line"></span></div>
+<section id="economy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">$VINI Economy</span>
+      <h2 class="section-title">One token, <span class="accent">the whole game</span></h2>
+      <p class="section-sub">$VINI fuels every action in the arena — from minting players to entering tournaments.</p>
+    </div>
+    <div class="econ-grid reveal">
+      <div class="econ-card"><div class="ek">Create a player</div><div class="ed">Mint a brand-new footballer NFT into your roster.</div><div class="ep">5,000 $VINI</div></div>
+      <div class="econ-card"><div class="ek">Upgrade shooting</div><div class="ed">Train an attribute and raise your player's rating.</div><div class="ep">1,000 $VINI</div></div>
+      <div class="econ-card"><div class="ek">Enter a tournament</div><div class="ed">Join the weekly cup and play for the prize pool.</div><div class="ep">2,000 $VINI</div></div>
+    </div>
+
+    <!-- roadmap strip -->
+    <div class="section-head reveal" style="margin:64px auto 28px">
+      <span class="eyebrow">Roadmap</span>
+      <h2 class="section-title" style="font-size:clamp(1.6rem,3.6vw,2.4rem)">The <span class="accent">3-month</span> kickoff</h2>
+    </div>
+    <div class="phase-track reveal" style="grid-template-columns:repeat(3,1fr)">
+      <div class="phase"><div class="pn" style="font-size:1.6rem">M1</div><div class="pl">Month One</div>
+        <ul><li><span class="ck">✓</span> Game website</li><li><span class="ck">✓</span> Wallet connect</li><li><span class="ck">✓</span> Player system</li></ul></div>
+      <div class="phase"><div class="pn" style="font-size:1.6rem">M2</div><div class="pl">Month Two</div>
+        <ul><li><span class="ck">✓</span> NFT players</li><li><span class="ck">✓</span> Marketplace</li></ul></div>
+      <div class="phase"><div class="pn" style="font-size:1.6rem">M3</div><div class="pl">Month Three</div>
+        <ul><li><span class="ck">✓</span> Tournaments</li><li><span class="ck">✓</span> Ranking</li><li><span class="ck">✓</span> Rewards</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-brand">VINI FOOTBALL ARENA</div>
+  <div class="foot-slogan">Create your NFT player and dominate the arena with $VINI.</div>
+  <div class="foot-socials">
+    <a href="https://x.com/Vinimemecoin" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.658l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg></a>
+    <a href="https://t.me/vinimemecoin" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.04 15.27l-.36 5.1c.52 0 .74-.22 1.01-.49l2.43-2.33 5.04 3.7c.92.51 1.58.24 1.82-.86l3.31-15.52c.32-1.39-.5-1.93-1.4-1.6L1.16 9.7c-1.36.53-1.34 1.29-.23 1.63l4.92 1.54L17.3 6.4c.54-.34 1.03-.15.63.2"/></svg></a>
+    <a href="https://www.tiktok.com/@vinimemecoin" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.93a8.16 8.16 0 0 0 4.77 1.52V7a4.85 4.85 0 0 1-1.84-.31Z"/></svg></a>
+  </div>
+  <p class="disclaimer">Vini Football Arena is a community game built around the Vini Meme Coin ecosystem. Player stats, prices and rewards shown here are demonstrations of gameplay. Crypto assets are volatile — nothing here is financial advice.</p>
+  <div class="copy">© 2026 Vini Football Arena · Powered by Solana &amp; $VINI</div>
+</footer>
+
+<script src="https://unpkg.com/@solana/[email protected]/lib/index.iife.min.js"></script>
+<script src="arena.js?v=3"></script>
+<script src="presale.js?v=1"></script>
+<script>
+  // hero floating card (legendary)
+  document.addEventListener('DOMContentLoaded', () => {
+    const stage = document.getElementById('heroCardStage');
+    if (stage && typeof cardHTML === 'function') {
+      stage.innerHTML = cardHTML(SHOWCASE.legendary);
+      stage.style.transform = 'scale(0.92)';
+      if (typeof bindTilt === 'function') bindTilt(stage);
+    }
+  });
+</script>
+</body>
+</html>
